@@ -14,14 +14,14 @@ void *operar(void *arg){
 
     struct Tnumero *n = (struct Tnumero *)arg;
 
-    while(n -> numero < 10000){
-	if(n->id = 1){
+    while(n -> numero < 100000){
+	if(n->id == 1){
 	    n -> aleatorio = rand() % 4;
 	    n -> numero += n -> aleatorio;
 	    printf("%i ", n -> numero);
 	}
 
-	if(n->id = 2){
+	if(n->id == 2){
 	    n -> aleatorio = rand() % 3; 
 	    n -> numero += n -> aleatorio;
 	    printf("%i ", n -> numero);
