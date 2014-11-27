@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
   /* BIND */
   address.sin_family = AF_INET;                          // Se indica de que familia es el socket.
   address.sin_port = htons( atoi(argv[1]) );             // Indica que puerto, y como es una cadena de caracteres hay que transformarlo a entero.
-  address.sin_addr.s_addr = inet_aton("0.0.0.0", address);        // inet_aton = convierte la direccion IP en hexadecimal y le da la vuelta a los bits. 0.0.0.0 permite la conexion desde el interior y exterior.
+  address.sin_addr.s_addr = /*inet_aton("0.0.0.0", &address.sin_addr)*/ INADDR_ANY;        // inet_aton = convierte la direccion IP en hexadecimal y le da la vuelta a los bits. 0.0.0.0 permite la conexion desde el interior y exterior.
   //memset(address.sin_zero, 0, sizeof(address.sin_zero)); // Rellena con 0 los 8 bits de sin_zero.
   bzero(address.sin_zero, sizeof(address.sin_zero));       // Rellena con 0 los 8 bits de sin_zero.
 
