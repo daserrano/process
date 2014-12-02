@@ -7,6 +7,8 @@
 #include <strings.h>
 #include <unistd.h>
 
+#include "common.h"
+
 #define BACKLOG 5
 
 void ohoh(const char *mssg) // Función para mostrar mensaje de perror.
